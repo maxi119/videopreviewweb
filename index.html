@@ -1,0 +1,24 @@
+<html>
+
+<body>
+
+<video id=v1 controls width="500">
+    <source src="http://igsoffice/sh/X4k" type="video/mp4" >
+    <a href="http://igsoffice/sh/X4k" >download</a>
+</video>
+
+
+<script type="text/javascript">
+window.onload=function(){
+    let v1 = document.getElementById("v1");
+	console.log( window.location.search )
+	let urlParams = new URLSearchParams(window.location.search);
+	console.log( urlParams.get("v") )
+	if( urlParams.get("v") ){
+		v1.setAttribute('src', urlParams.get("v") )
+	}
+}
+</script>
+
+</body>
+</html>
